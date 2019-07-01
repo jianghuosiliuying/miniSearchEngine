@@ -7,7 +7,7 @@ using namespace mm;
 
 int main()
 {
-    Configuration * pconf=Configuration::createConfig()->init("../conf");
+    Configuration::createConfig()->init("../conf");
     FileProcessor dir;
     vector<string> & file=dir.getfiles();
     for(auto & k:file)
