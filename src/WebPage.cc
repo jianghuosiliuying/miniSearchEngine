@@ -37,18 +37,37 @@ string WebPage::getUrl()
 string WebPage::getSummary(vector<string> & word)
 {
     createSummary(word);
-    //return _docSummary;
-    return _docTitle;
+    return _docSummary;
 }
 void WebPage::createSummary(vector<string> & word)
-{//截取单词所在的一句话
-    string content=getContent();
+{//截取单词所在的一行
+    string content=_docDescription+"\n"+_docContent;
     string line;
     stringstream ss(content);
     while(getline(ss,line))
     {
         for(auto & w:word)
         {
+            size_t cur=line.find(w);//无符号数
+            int n=cur;
+            if(cur!=string::npos){
+                string w;
+                //cout<<"sz="<<line.size()<<" cur="<<cur<<endl;
+                if((n-150)<0 && (n+150)<(int)line.size()){
+                    w=line.substr(0,(cur+150));//头部短，尾部长
+                    _docSummary.append(w).append("...<br/>");
+                }else if((n-150)<0 && (n+150)>=(int)(line.size())){
+                    w=line.substr(0,line.size());//头部短，尾部短
+                    _docSummary.append(w).append("...<br/>");
+                }else if((n-150)>=0 && (n+150)>=(int)(line.size())){
+                    w=line.substr(n-150,(line.size()-cur+150));//头部长，尾部短
+                    _docSummary.append(w).append("...<br/>");
+                }else{
+                    w=line.substr(cur-150,300);
+                    _docSummary.append(w).append("...<br/>");
+                }
+                //cout<<_docSummary<<endl;
+            }
         }
     }
 }

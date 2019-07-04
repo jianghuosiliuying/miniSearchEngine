@@ -80,7 +80,7 @@ void MyTask::process()
 	//_conn->send(response);//由线程池的线程(计算线程)完成数据的发送,在设计上来说，是不合理的
 						  //数据发送的工作要交还给IO线程(Reactor所在的线程)完成
 						  //将send的函数的执行延迟到IO线程取操作
-    cout<<response<<endl;
+    //cout<<response<<endl;
     //以下4句是为php服务
     int sz=response.size();
     string message(to_string(sz));
@@ -109,8 +109,8 @@ void MyTask::createJson(string & response)//建立json
         arr.append(elem);
     }
     root["files"]=arr;
-    Json::FastWriter writer;
-    //Json::StyledWriter writer;
+    //Json::FastWriter writer;
+    Json::StyledWriter writer;
     response=writer.write(root);//fastwriter自带换行
 }
 
@@ -124,8 +124,8 @@ void MyTask::createNoJson(string & response)
     elem["url"]="";
     arr.append(elem);
     root["files"]=arr;
-    Json::FastWriter writer;
-    //Json::StyledWriter writer;
+    //Json::FastWriter writer;
+    Json::StyledWriter writer;
     response=writer.write(root);
 }
 
