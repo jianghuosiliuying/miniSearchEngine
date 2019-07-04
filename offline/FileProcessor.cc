@@ -167,6 +167,13 @@ void FileProcessor::cutRedundantPage()
         _newvecWebpage.push_back(*iter);
     }
     sort(_newvecWebpage.begin(),_newvecWebpage.end(),compare);//重新按id排序
+    cout<<"将重新设置文档ID值。"<<endl;
+    int i=1;
+    for(auto & web:_newvecWebpage)
+    {
+        web.setDocId(i);
+        ++i;
+    }
     cout<<"去重后文档总和："<<_newvecWebpage.size()<<endl;
 }
 
@@ -180,10 +187,11 @@ void FileProcessor::InvertIndex()
                 "../include/cppjieba/dict/stop_words.utf8"
                );
     cout<<"will create word FreQuency."<<endl;
+    _stopWord=_pconf->getStopWordList();//获取停用词
     for(auto & web:_newvecWebpage)
     {//建立词频
         cout<<"will computing the "<<web.getDocID()<<" word FreQuency."<<endl;
-        web.computeFreQuency(jieba);
+        web.computeFreQuency(jieba,_stopWord);
     }
     cout<<" create word FreQuency finish."<<endl;
     cout<<"will create word Index and docID."<<endl;
@@ -219,7 +227,7 @@ void FileProcessor::InvertIndex()
         map<string,int> & wordmap=web.getWordMap();
         for(auto & words:wordmap)
         {
-            W=web.computeWordWight(words.first);
+            W=web.computeWordWight(words.first);//会先调用单词权重平方和函数
             auto it=_InvertIndexTable[words.first].find(id);
             if(it!=_InvertIndexTable[words.first].end()){
                 it->second=W;

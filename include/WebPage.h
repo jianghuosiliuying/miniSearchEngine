@@ -17,12 +17,18 @@ class WebPage
     friend bool operator==(const WebPage & lhs,const WebPage & rhs);
     friend bool operator<(const WebPage & lhs,const WebPage & rhs);
 public:
+    WebPage(string & content);
     WebPage(int id,string & title,string & url,string & description,string & content);
     int getDocID();
+    void setDocId(int);//重设文档编号
     string getDoc();
+    string getTitle();
+    string getUrl();
+    string getSummary(vector<string> & word);
     string getContent();
+    void createSummary(vector<string> & word);
     void buildU64(Simhasher &);
-    void computeFreQuency(Jieba &);
+    void computeFreQuency(Jieba &,unordered_set<string> &);
     int searchWord(string);//查该词出现的次数
     void setWordWigh(string,double);//为单词添加权重值
     void computeAvgWigh();//计算归一权重值

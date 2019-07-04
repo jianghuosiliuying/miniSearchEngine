@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include <map>
-#include <set>
+#include <unordered_set>
 
 using namespace std;
 
@@ -16,7 +16,7 @@ public:
     static void destroy();
     Configuration * init(const string & filepath);
     map<string,string> & getConfigMap();
-    set<string> & getStopWordList();
+    unordered_set<string> & getStopWordList();
 private:
     Configuration(){    cout<<"Configuration()"<<endl;  }
     ~Configuration(){}
@@ -24,7 +24,7 @@ private:
     static Configuration * _pconf;
     string _filepath;
     map<string,string> _configMap;
-    set<string> _stopWordList;//停用词词集
+    unordered_set<string> _stopWordList;//停用词词集
 };
 
 }//end of namespace mm

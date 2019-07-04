@@ -4,6 +4,14 @@
 
 namespace mm
 {
+WebPage::WebPage(string & content)
+:_docId(0)
+,_docTitle(string())
+,_docUrl(string())
+,_docDescription(string())
+,_docContent(content)
+{}
+
 WebPage::WebPage(int id,string & title,string & url,string & description,string & content)
 :_docId(id)
 ,_docTitle(title)
@@ -17,6 +25,32 @@ WebPage::WebPage(int id,string & title,string & url,string & description,string 
 int WebPage::getDocID()
 {
     return _docId;
+}
+string WebPage::getTitle()
+{
+    return _docTitle;
+}
+string WebPage::getUrl()
+{
+    return _docUrl;
+}
+string WebPage::getSummary(vector<string> & word)
+{
+    createSummary(word);
+    //return _docSummary;
+    return _docTitle;
+}
+void WebPage::createSummary(vector<string> & word)
+{//截取单词所在的一句话
+    string content=getContent();
+    string line;
+    stringstream ss(content);
+    while(getline(ss,line))
+    {
+        for(auto & w:word)
+        {
+        }
+    }
 }
 
 void WebPage::setDocId(int id)

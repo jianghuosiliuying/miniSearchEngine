@@ -1,0 +1,413 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Acceptor	Acceptor.cc	/^Acceptor::Acceptor(const string & ip, unsigned short port)$/;"	f	class:mm::Acceptor
+Acceptor	Acceptor.cc	/^Acceptor::Acceptor(unsigned short port)$/;"	f	class:mm::Acceptor
+BatchAllocator	json/json_batchallocator.h	/^   BatchAllocator( unsigned int objectsPerPage = 255 )$/;"	f	class:Json::BatchAllocator
+BatchAllocator	json/json_batchallocator.h	/^class BatchAllocator$/;"	c	namespace:Json
+BatchInfo	json/json_batchallocator.h	/^   struct BatchInfo$/;"	s	class:Json::BatchAllocator
+CXX	Makefile	/^CXX:=g++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS:= -w -g  $(addprefix -I, $(INC_DIR)) $(LIBS) $/;"	m
+CZString	json/json_value.cpp	/^Value::CZString::CZString( const CZString &other )$/;"	f	class:Json::Value::CZString
+CZString	json/json_value.cpp	/^Value::CZString::CZString( const char *cstr, DuplicationPolicy allocate )$/;"	f	class:Json::Value::CZString
+CZString	json/json_value.cpp	/^Value::CZString::CZString( int index )$/;"	f	class:Json::Value::CZString
+Cache	Cache.cc	/^Cache::Cache(int capacity):capacity_(capacity)$/;"	f	class:mm::Cache
+CacheManger	CacheManger.cc	/^CacheManger::CacheManger()$/;"	f	class:mm::CacheManger
+CommentInfo	json/json_value.cpp	/^Value::CommentInfo::CommentInfo()$/;"	f	class:Json::Value::CommentInfo
+Condition	Condition.cc	/^Condition::Condition(MutexLock & mutex)$/;"	f	class:mm::Condition
+DefaultValueAllocator	json/json_value.cpp	/^class DefaultValueAllocator : public ValueAllocator$/;"	c	namespace:Json	file:
+DummyValueAllocatorInitializer	json/json_value.cpp	/^   DummyValueAllocatorInitializer() $/;"	f	struct:Json::DummyValueAllocatorInitializer
+DummyValueAllocatorInitializer	json/json_value.cpp	/^static struct DummyValueAllocatorInitializer {$/;"	s	namespace:Json	file:
+EXE	Makefile	/^EXE:=.\/server.exe$/;"	m
+EventLoop	EventLoop.cc	/^EventLoop::EventLoop(Acceptor & acceptor)$/;"	f	class:mm::EventLoop
+FastWriter	json/json_writer.cpp	/^FastWriter::FastWriter()$/;"	f	class:Json::FastWriter
+Features	json/json_reader.cpp	/^Features::Features()$/;"	f	class:Json::Features
+INC_DIR	Makefile	/^INC_DIR:= .\/$/;"	m
+InetAddress	InetAddress.cc	/^InetAddress::InetAddress(const string & ip, unsigned short port)$/;"	f	class:mm::InetAddress
+InetAddress	InetAddress.cc	/^InetAddress::InetAddress(const struct sockaddr_in & addr)$/;"	f	class:mm::InetAddress
+InetAddress	InetAddress.cc	/^InetAddress::InetAddress(unsigned short port)$/;"	f	class:mm::InetAddress
+JSONCPP_BATCHALLOCATOR_H_INCLUDED	json/json_batchallocator.h	2;"	d
+JSON_ASSERT	json/json_value.cpp	17;"	d	file:
+JSON_ASSERT_MESSAGE	json/json_value.cpp	18;"	d	file:
+JSON_ASSERT_UNREACHABLE	json/json_value.cpp	16;"	d	file:
+Json	json/json_batchallocator.h	/^namespace Json {$/;"	n
+Json	json/json_reader.cpp	/^namespace Json {$/;"	n	file:
+Json	json/json_value.cpp	/^namespace Json {$/;"	n	file:
+Json	json/json_writer.cpp	/^namespace Json {$/;"	n	file:
+LIBS	Makefile	/^LIBS:= -lpthread$/;"	m
+MutexLock	MutexLock.cc	/^MutexLock::MutexLock()$/;"	f	class:mm::MutexLock
+MyTask	MyTask.cc	/^MyTask::MyTask(const string & msg,const mm::TcpConnectionPtr & conn)$/;"	f	class:mm::MyTask
+Num_	Thread.cc	/^    int Num_;$/;"	m	struct:mm::ThreadData	file:
+OBJS	Makefile	/^OBJS:= $(patsubst %.cc, %.o, $(SRCS))$/;"	m
+Path	json/json_value.cpp	/^Path::Path( const std::string &path,$/;"	f	class:Json::Path
+PathArgument	json/json_value.cpp	/^PathArgument::PathArgument( Value::UInt index )$/;"	f	class:Json::PathArgument
+PathArgument	json/json_value.cpp	/^PathArgument::PathArgument( const char *key )$/;"	f	class:Json::PathArgument
+PathArgument	json/json_value.cpp	/^PathArgument::PathArgument( const std::string &key )$/;"	f	class:Json::PathArgument
+PathArgument	json/json_value.cpp	/^PathArgument::PathArgument()$/;"	f	class:Json::PathArgument
+Reader	json/json_reader.cpp	/^Reader::Reader( const Features &features )$/;"	f	class:Json::Reader
+Reader	json/json_reader.cpp	/^Reader::Reader()$/;"	f	class:Json::Reader
+SRCS	Makefile	/^SRCS:=$(wildcard *.cc)$/;"	m
+SRC_DIR	Makefile	/^SRC_DIR:= .\/$/;"	m
+Socket	Socket.cc	/^Socket::Socket()$/;"	f	class:mm::Socket
+Socket	Socket.cc	/^Socket::Socket(int fd)$/;"	f	class:mm::Socket
+SocketIO	SocketIO.cc	/^SocketIO::SocketIO(int fd)$/;"	f	class:mm::SocketIO
+SpellcorrectServer	WordQueryServer.cc	/^SpellcorrectServer::SpellcorrectServer(const string & conffileName)$/;"	f	class:mm::SpellcorrectServer
+StyledStreamWriter	json/json_writer.cpp	/^StyledStreamWriter::StyledStreamWriter( std::string indentation )$/;"	f	class:Json::StyledStreamWriter
+StyledWriter	json/json_writer.cpp	/^StyledWriter::StyledWriter()$/;"	f	class:Json::StyledWriter
+TaskQueue	TaskQueue.cc	/^TaskQueue::TaskQueue(size_t sz)$/;"	f	class:mm::TaskQueue
+TcpConnection	TcpConnection.cc	/^TcpConnection::TcpConnection(int fd, EventLoop * loop)$/;"	f	class:mm::TcpConnection
+TcpServer	TcpServer.cc	/^TcpServer::TcpServer(const string & ip, unsigned short port)$/;"	f	class:mm::TcpServer
+Thread	Thread.cc	/^Thread::Thread(ThreadCallback && cb,int Num)$/;"	f	class:mm::Thread
+ThreadData	Thread.cc	/^    ThreadData(const int Num,ThreadCallback cb)$/;"	f	struct:mm::ThreadData
+ThreadData	Thread.cc	/^struct ThreadData$/;"	s	namespace:mm	file:
+Threadpool	Threadpool.cc	/^Threadpool::Threadpool(size_t Num, size_t queSize)$/;"	f	class:mm::Threadpool
+Type	json/json_batchallocator.h	/^   typedef AllocatedType Type;$/;"	t	class:Json::BatchAllocator
+Value	json/json_value.cpp	/^Value::Value( Int value )$/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( UInt value )$/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( ValueType type )$/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( bool value )$/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( const CppTL::ConstString &value )$/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( const StaticString &value )$/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( const Value &other )$/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( const char *beginValue, $/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( const char *value )$/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( const std::string &value )$/;"	f	class:Json::Value
+Value	json/json_value.cpp	/^Value::Value( double value )$/;"	f	class:Json::Value
+WebPage	WebPage.cc	/^WebPage::WebPage(int id,string & title,string & url,string & description,string & content)$/;"	f	class:mm::WebPage
+WebPage	WebPage.cc	/^WebPage::WebPage(string & content)$/;"	f	class:mm::WebPage
+_pconf	Configuration.cc	/^Configuration * Configuration::_pconf=createConfig();\/\/饱汉模式$/;"	m	class:mm::Configuration	file:
+accept	Acceptor.cc	/^int Acceptor::accept()$/;"	f	class:mm::Acceptor
+addComment	json/json_reader.cpp	/^Reader::addComment( Location begin, $/;"	f	class:Json::Reader
+addElement	Cache.cc	/^void Cache::addElement(string word,string json)$/;"	f	class:mm::Cache
+addEpollFdRead	EventLoop.cc	/^void EventLoop::addEpollFdRead(int fd)$/;"	f	class:mm::EventLoop
+addError	json/json_reader.cpp	/^Reader::addError( const std::string &message, $/;"	f	class:Json::Reader
+addErrorAndRecover	json/json_reader.cpp	/^Reader::addErrorAndRecover( const std::string &message, $/;"	f	class:Json::Reader
+addPathInArg	json/json_value.cpp	/^Path::addPathInArg( const std::string &path, $/;"	f	class:Json::Path
+addTask	Threadpool.cc	/^void Threadpool::addTask(Task && task)$/;"	f	class:mm::Threadpool
+all	json/json_reader.cpp	/^Features::all()$/;"	f	class:Json::Features
+allocate	json/json_batchallocator.h	/^   AllocatedType *allocate()$/;"	f	class:Json::BatchAllocator
+allocateBatch	json/json_batchallocator.h	/^   static BatchInfo *allocateBatch( unsigned int objectsPerPage )$/;"	f	class:Json::BatchAllocator
+append	json/json_value.cpp	/^Value::append( const Value &value )$/;"	f	class:Json::Value
+asBool	json/json_value.cpp	/^Value::asBool() const$/;"	f	class:Json::Value
+asCString	json/json_value.cpp	/^Value::asCString() const$/;"	f	class:Json::Value
+asConstString	json/json_value.cpp	/^Value::asConstString() const$/;"	f	class:Json::Value
+asDouble	json/json_value.cpp	/^Value::asDouble() const$/;"	f	class:Json::Value
+asInt	json/json_value.cpp	/^Value::asInt() const$/;"	f	class:Json::Value
+asString	json/json_value.cpp	/^Value::asString() const$/;"	f	class:Json::Value
+asUInt	json/json_value.cpp	/^Value::asUInt() const$/;"	f	class:Json::Value
+batches_	json/json_batchallocator.h	/^   BatchInfo *batches_;$/;"	m	class:Json::BatchAllocator
+begin	json/json_value.cpp	/^Value::begin() const$/;"	f	class:Json::Value
+begin	json/json_value.cpp	/^Value::begin()$/;"	f	class:Json::Value
+bind	Acceptor.cc	/^void Acceptor::bind()$/;"	f	class:mm::Acceptor
+buffer_	json/json_batchallocator.h	/^      AllocatedType buffer_[objectPerAllocation];$/;"	m	struct:Json::BatchAllocator::BatchInfo
+buildU64	WebPage.cc	/^void WebPage::buildU64(Simhasher & simhasher)$/;"	f	class:mm::WebPage
+c_str	json/json_value.cpp	/^Value::CZString::c_str() const$/;"	f	class:Json::Value::CZString
+cb_	Thread.cc	/^    ThreadCallback cb_;$/;"	m	struct:mm::ThreadData	file:
+clear	json/json_value.cpp	/^Value::clear()$/;"	f	class:Json::Value
+codePointToUTF8	json/json_reader.cpp	/^static std::string codePointToUTF8(unsigned int cp)$/;"	f	namespace:Json
+compare	json/json_value.cpp	/^Value::compare( const Value &other )$/;"	f	class:Json::Value
+computeAvgWigh	WebPage.cc	/^void WebPage::computeAvgWigh()$/;"	f	class:mm::WebPage
+computeCOSdistance	MyTask.cc	/^double MyTask::computeCOSdistance(vector<double> & wight2)$/;"	f	class:mm::MyTask
+computeFreQuency	WebPage.cc	/^void WebPage::computeFreQuency(Jieba & jieba,unordered_set<string> & stopWord)$/;"	f	class:mm::WebPage
+computeWordWight	WebPage.cc	/^double WebPage::computeWordWight(string word)$/;"	f	class:mm::WebPage
+containsControlCharacter	json/json_writer.cpp	/^static bool containsControlCharacter( const char* str )$/;"	f	namespace:Json
+containsNewLine	json/json_reader.cpp	/^containsNewLine( Reader::Location begin, $/;"	f	namespace:Json
+createCacheManger	CacheManger.cc	/^CacheManger * CacheManger::createCacheManger()$/;"	f	class:mm::CacheManger
+createConfig	Configuration.cc	/^Configuration * Configuration::createConfig()$/;"	f	class:mm::Configuration
+createEpollFd	EventLoop.cc	/^int EventLoop::createEpollFd()$/;"	f	class:mm::EventLoop
+createEventFd	EventLoop.cc	/^int EventLoop::createEventFd()$/;"	f	class:mm::EventLoop
+createJson	MyTask.cc	/^void MyTask::createJson(string & response)\/\/建立json$/;"	f	class:mm::MyTask
+createTimer	Timer.cc	/^Timer * Timer::createTimer()$/;"	f	class:mm::Timer
+createTimerfd	Timer.cc	/^int Timer::createTimerfd()$/;"	f	class:mm::Timer
+createWordQuery	WordQuery.cc	/^WordQuery * WordQuery::createWordQuery()$/;"	f	class:mm::WordQuery
+currentBatch_	json/json_batchallocator.h	/^   BatchInfo *currentBatch_;$/;"	m	class:Json::BatchAllocator
+currentValue	json/json_reader.cpp	/^Reader::currentValue()$/;"	f	class:Json::Reader
+decodeDouble	json/json_reader.cpp	/^Reader::decodeDouble( Token &token )$/;"	f	class:Json::Reader
+decodeNumber	json/json_reader.cpp	/^Reader::decodeNumber( Token &token )$/;"	f	class:Json::Reader
+decodeString	json/json_reader.cpp	/^Reader::decodeString( Token &token )$/;"	f	class:Json::Reader
+decodeString	json/json_reader.cpp	/^Reader::decodeString( Token &token, std::string &decoded )$/;"	f	class:Json::Reader
+decodeUnicodeCodePoint	json/json_reader.cpp	/^Reader::decodeUnicodeCodePoint( Token &token, $/;"	f	class:Json::Reader
+decodeUnicodeEscapeSequence	json/json_reader.cpp	/^Reader::decodeUnicodeEscapeSequence( Token &token, $/;"	f	class:Json::Reader
+delEpollFdRead	EventLoop.cc	/^void EventLoop::delEpollFdRead(int fd)$/;"	f	class:mm::EventLoop
+destory	CacheManger.cc	/^void CacheManger::destory()$/;"	f	class:mm::CacheManger
+destory	Timer.cc	/^void Timer::destory()$/;"	f	class:mm::Timer
+destory	WordQuery.cc	/^void WordQuery::destory()$/;"	f	class:mm::WordQuery
+destroy	Configuration.cc	/^void Configuration::destroy()$/;"	f	class:mm::Configuration
+doPendingFunctors	EventLoop.cc	/^void EventLoop::doPendingFunctors()$/;"	f	class:mm::EventLoop
+dummyValueAllocatorInitializer	json/json_value.cpp	/^} dummyValueAllocatorInitializer;$/;"	m	namespace:Json	typeref:struct:Json::DummyValueAllocatorInitializer	file:
+duplicateStringValue	json/json_value.cpp	/^   virtual char *duplicateStringValue( const char *value, $/;"	f	class:Json::DefaultValueAllocator
+empty	TaskQueue.cc	/^bool TaskQueue::empty() const$/;"	f	class:mm::TaskQueue
+empty	json/json_value.cpp	/^Value::empty() const$/;"	f	class:Json::Value
+enableYAMLCompatibility	json/json_writer.cpp	/^FastWriter::enableYAMLCompatibility()$/;"	f	class:Json::FastWriter
+end	json/json_value.cpp	/^Value::end() const$/;"	f	class:Json::Value
+end	json/json_value.cpp	/^Value::end()$/;"	f	class:Json::Value
+end_	json/json_batchallocator.h	/^      AllocatedType *end_;$/;"	m	struct:Json::BatchAllocator::BatchInfo
+expectToken	json/json_reader.cpp	/^Reader::expectToken( TokenType type, Token &token, const char *message )$/;"	f	class:Json::Reader
+fd	Socket.cc	/^int Socket::fd() const {	return _fd;	}$/;"	f	class:mm::Socket
+findResultset	MyTask.cc	/^void MyTask::findResultset()$/;"	f	class:mm::MyTask
+freeHead_	json/json_batchallocator.h	/^   AllocatedType *freeHead_;$/;"	m	class:Json::BatchAllocator
+full	TaskQueue.cc	/^bool TaskQueue::full() const$/;"	f	class:mm::TaskQueue
+get	json/json_value.cpp	/^Value::get( UInt index, $/;"	f	class:Json::Value
+get	json/json_value.cpp	/^Value::get( const CppTL::ConstString &key,$/;"	f	class:Json::Value
+get	json/json_value.cpp	/^Value::get( const char *key, $/;"	f	class:Json::Value
+get	json/json_value.cpp	/^Value::get( const std::string &key,$/;"	f	class:Json::Value
+getAvgWight	WebPage.cc	/^double WebPage::getAvgWight()$/;"	f	class:mm::WebPage
+getCache	CacheManger.cc	/^Cache & CacheManger::getCache(size_t idx)$/;"	f	class:mm::CacheManger
+getCacheList	Cache.cc	/^list<pair<string,string>> & Cache::getCacheList()$/;"	f	class:mm::Cache
+getComment	json/json_value.cpp	/^Value::getComment( CommentPlacement placement ) const$/;"	f	class:Json::Value
+getConfigMap	Configuration.cc	/^map<string,string> & Configuration::getConfigMap()$/;"	f	class:mm::Configuration
+getContent	WebPage.cc	/^string WebPage::getContent()$/;"	f	class:mm::WebPage
+getDoc	WebPage.cc	/^string WebPage::getDoc()$/;"	f	class:mm::WebPage
+getDocID	WebPage.cc	/^int WebPage::getDocID()$/;"	f	class:mm::WebPage
+getFd	Timer.cc	/^int Timer::getFd()$/;"	f	class:mm::Timer
+getFormatedErrorMessages	json/json_reader.cpp	/^Reader::getFormatedErrorMessages() const$/;"	f	class:Json::Reader
+getIndextable	WordQuery.cc	/^unordered_map<string,unordered_map<int,double>> & WordQuery::getIndextable()$/;"	f	class:mm::WordQuery
+getLocalAddr	TcpConnection.cc	/^InetAddress TcpConnection::getLocalAddr()$/;"	f	class:mm::TcpConnection
+getLocationLineAndColumn	json/json_reader.cpp	/^Reader::getLocationLineAndColumn( Location location ) const$/;"	f	class:Json::Reader
+getLocationLineAndColumn	json/json_reader.cpp	/^Reader::getLocationLineAndColumn( Location location,$/;"	f	class:Json::Reader
+getMemberNames	json/json_value.cpp	/^Value::getMemberNames() const$/;"	f	class:Json::Value
+getNextChar	json/json_reader.cpp	/^Reader::getNextChar()$/;"	f	class:Json::Reader
+getOffset	WordQuery.cc	/^map<int,pair<int,int>> & WordQuery::getOffset()$/;"	f	class:mm::WordQuery
+getPeerAddr	TcpConnection.cc	/^InetAddress TcpConnection::getPeerAddr()$/;"	f	class:mm::TcpConnection
+getStopWordList	Configuration.cc	/^unordered_set<string> & Configuration::getStopWordList()$/;"	f	class:mm::Configuration
+getTask	Threadpool.cc	/^Task Threadpool::getTask()$/;"	f	class:mm::Threadpool
+getWordMap	WebPage.cc	/^map<string,int> & WebPage::getWordMap()$/;"	f	class:mm::WebPage
+getpageLib	WordQuery.cc	/^vector<WebPage> & WordQuery::getpageLib()$/;"	f	class:mm::WordQuery
+handleCloseCallback	TcpConnection.cc	/^void TcpConnection::handleCloseCallback()$/;"	f	class:mm::TcpConnection
+handleConnectionCallback	TcpConnection.cc	/^void TcpConnection::handleConnectionCallback()$/;"	f	class:mm::TcpConnection
+handleMessage	EventLoop.cc	/^void EventLoop::handleMessage(int fd)$/;"	f	class:mm::EventLoop
+handleMessageCallback	TcpConnection.cc	/^void TcpConnection::handleMessageCallback()$/;"	f	class:mm::TcpConnection
+handleNewConnection	EventLoop.cc	/^void EventLoop::handleNewConnection()$/;"	f	class:mm::EventLoop
+handleRead	Timer.cc	/^void Timer::handleRead()$/;"	f	class:mm::Timer
+handleSendRead	EventLoop.cc	/^void EventLoop::handleSendRead()$/;"	f	class:mm::EventLoop
+hasComment	json/json_value.cpp	/^Value::hasComment( CommentPlacement placement ) const$/;"	f	class:Json::Value
+hasCommentForValue	json/json_writer.cpp	/^StyledStreamWriter::hasCommentForValue( const Value &value )$/;"	f	class:Json::StyledStreamWriter
+hasCommentForValue	json/json_writer.cpp	/^StyledWriter::hasCommentForValue( const Value &value )$/;"	f	class:Json::StyledWriter
+in	json/json_reader.cpp	/^in( Reader::Char c, Reader::Char c1, Reader::Char c2, Reader::Char c3, Reader::Char c4 )$/;"	f	namespace:Json
+in	json/json_reader.cpp	/^in( Reader::Char c, Reader::Char c1, Reader::Char c2, Reader::Char c3, Reader::Char c4, Reader::Char c5 )$/;"	f	namespace:Json
+indent	json/json_writer.cpp	/^StyledStreamWriter::indent()$/;"	f	class:Json::StyledStreamWriter
+indent	json/json_writer.cpp	/^StyledWriter::indent()$/;"	f	class:Json::StyledWriter
+index	json/json_value.cpp	/^Value::CZString::index() const$/;"	f	class:Json::Value::CZString
+init	CacheManger.cc	/^CacheManger * CacheManger::init() $/;"	f	class:mm::CacheManger
+init	Configuration.cc	/^Configuration * Configuration::init(const string & filepath)$/;"	f	class:mm::Configuration
+init	WordQuery.cc	/^void WordQuery::init()$/;"	f	class:mm::WordQuery
+initTime	Timer.cc	/^Timer * Timer::initTime(int initTime,int intervalTime,TimerCallback && cb)$/;"	f	class:mm::Timer
+invalidPath	json/json_value.cpp	/^Path::invalidPath( const std::string &path, $/;"	f	class:Json::Path
+ip	InetAddress.cc	/^string InetAddress::ip() const$/;"	f	class:mm::InetAddress
+isArray	json/json_value.cpp	/^Value::isArray() const$/;"	f	class:Json::Value
+isBool	json/json_value.cpp	/^Value::isBool() const$/;"	f	class:Json::Value
+isConnectionClosed	EventLoop.cc	/^bool EventLoop::isConnectionClosed(int fd)$/;"	f	class:mm::EventLoop
+isControlCharacter	json/json_writer.cpp	/^static bool isControlCharacter(char ch)$/;"	f	namespace:Json
+isConvertibleTo	json/json_value.cpp	/^Value::isConvertibleTo( ValueType other ) const$/;"	f	class:Json::Value
+isDouble	json/json_value.cpp	/^Value::isDouble() const$/;"	f	class:Json::Value
+isInt	json/json_value.cpp	/^Value::isInt() const$/;"	f	class:Json::Value
+isIntegral	json/json_value.cpp	/^Value::isIntegral() const$/;"	f	class:Json::Value
+isMember	json/json_value.cpp	/^Value::isMember( const CppTL::ConstString &key ) const$/;"	f	class:Json::Value
+isMember	json/json_value.cpp	/^Value::isMember( const char *key ) const$/;"	f	class:Json::Value
+isMember	json/json_value.cpp	/^Value::isMember( const std::string &key ) const$/;"	f	class:Json::Value
+isMultineArray	json/json_writer.cpp	/^StyledStreamWriter::isMultineArray( const Value &value )$/;"	f	class:Json::StyledStreamWriter
+isMultineArray	json/json_writer.cpp	/^StyledWriter::isMultineArray( const Value &value )$/;"	f	class:Json::StyledWriter
+isNull	json/json_value.cpp	/^Value::isNull() const$/;"	f	class:Json::Value
+isNumeric	json/json_value.cpp	/^Value::isNumeric() const$/;"	f	class:Json::Value
+isObject	json/json_value.cpp	/^Value::isObject() const$/;"	f	class:Json::Value
+isStaticString	json/json_value.cpp	/^Value::CZString::isStaticString() const$/;"	f	class:Json::Value::CZString
+isString	json/json_value.cpp	/^Value::isString() const$/;"	f	class:Json::Value
+isUInt	json/json_value.cpp	/^Value::isUInt() const$/;"	f	class:Json::Value
+isValidIndex	json/json_value.cpp	/^Value::isValidIndex( UInt index ) const$/;"	f	class:Json::Value
+join	Thread.cc	/^void Thread::join()$/;"	f	class:mm::Thread
+listen	Acceptor.cc	/^void Acceptor::listen()$/;"	f	class:mm::Acceptor
+lock	MutexLock.cc	/^void MutexLock::lock()$/;"	f	class:mm::MutexLock
+loop	EventLoop.cc	/^void EventLoop::loop()$/;"	f	class:mm::EventLoop
+main	testminisearchengine.cc	/^int main()$/;"	f
+make	json/json_value.cpp	/^Path::make( Value &root ) const$/;"	f	class:Json::Path
+makeMemberName	json/json_value.cpp	/^   virtual char *makeMemberName( const char *memberName )$/;"	f	class:Json::DefaultValueAllocator
+makePath	json/json_value.cpp	/^Path::makePath( const std::string &path,$/;"	f	class:Json::Path
+match	json/json_reader.cpp	/^Reader::match( Location pattern, $/;"	f	class:Json::Reader
+maxInt	json/json_value.cpp	/^const Int Value::maxInt = Int( UInt(-1)\/2 );$/;"	m	class:Json::Value	file:
+maxUInt	json/json_value.cpp	/^const UInt Value::maxUInt = UInt(-1);$/;"	m	class:Json::Value	file:
+minInt	json/json_value.cpp	/^const Int Value::minInt = Int( ~(UInt(-1)\/2) );$/;"	m	class:Json::Value	file:
+mm	Acceptor.cc	/^namespace mm$/;"	n	file:
+mm	Cache.cc	/^namespace mm$/;"	n	file:
+mm	CacheManger.cc	/^namespace mm$/;"	n	file:
+mm	Condition.cc	/^namespace mm$/;"	n	file:
+mm	Configuration.cc	/^namespace mm$/;"	n	file:
+mm	EventLoop.cc	/^namespace mm$/;"	n	file:
+mm	InetAddress.cc	/^namespace mm$/;"	n	file:
+mm	MutexLock.cc	/^namespace mm$/;"	n	file:
+mm	MyTask.cc	/^namespace mm$/;"	n	file:
+mm	Socket.cc	/^namespace mm$/;"	n	file:
+mm	SocketIO.cc	/^namespace mm$/;"	n	file:
+mm	TaskQueue.cc	/^namespace mm$/;"	n	file:
+mm	TcpConnection.cc	/^namespace mm$/;"	n	file:
+mm	TcpServer.cc	/^namespace mm$/;"	n	file:
+mm	Thread.cc	/^namespace mm$/;"	n	file:
+mm	Threadpool.cc	/^namespace mm $/;"	n	file:
+mm	Timer.cc	/^namespace mm$/;"	n	file:
+mm	WebPage.cc	/^namespace mm$/;"	n	file:
+mm	WordQuery.cc	/^namespace mm$/;"	n	file:
+mm	WordQueryServer.cc	/^namespace mm$/;"	n	file:
+next_	json/json_batchallocator.h	/^      BatchInfo *next_;$/;"	m	struct:Json::BatchAllocator::BatchInfo
+normalizeEOL	json/json_writer.cpp	/^StyledStreamWriter::normalizeEOL( const std::string &text )$/;"	f	class:Json::StyledStreamWriter
+normalizeEOL	json/json_writer.cpp	/^StyledWriter::normalizeEOL( const std::string &text )$/;"	f	class:Json::StyledWriter
+notify	Condition.cc	/^void Condition::notify()$/;"	f	class:mm::Condition
+notifyAll	Condition.cc	/^void Condition::notifyAll()$/;"	f	class:mm::Condition
+null	json/json_value.cpp	/^const Value Value::null;$/;"	m	class:Json::Value	file:
+objectsPerPage_	json/json_batchallocator.h	/^   unsigned int objectsPerPage_;$/;"	m	class:Json::BatchAllocator
+onClose	WordQueryServer.cc	/^void SpellcorrectServer::onClose(const mm::TcpConnectionPtr & conn)$/;"	f	class:mm::SpellcorrectServer
+onConnection	WordQueryServer.cc	/^void SpellcorrectServer::onConnection(const TcpConnectionPtr & conn)$/;"	f	class:mm::SpellcorrectServer
+onMessage	WordQueryServer.cc	/^void SpellcorrectServer::onMessage(const TcpConnectionPtr & conn)$/;"	f	class:mm::SpellcorrectServer
+operator !	json/json_value.cpp	/^Value::operator!() const$/;"	f	class:Json::Value
+operator !=	json/json_value.cpp	/^Value::operator !=( const Value &other ) const$/;"	f	class:Json::Value
+operator <	WebPage.cc	/^bool operator<(const WebPage & lhs,const WebPage & rhs)$/;"	f	namespace:mm
+operator <	json/json_value.cpp	/^Value::CZString::operator<( const CZString &other ) const $/;"	f	class:Json::Value::CZString
+operator <	json/json_value.cpp	/^Value::operator <( const Value &other ) const$/;"	f	class:Json::Value
+operator <<	json/json_writer.cpp	/^std::ostream& operator<<( std::ostream &sout, const Value &root )$/;"	f	namespace:Json
+operator <=	json/json_value.cpp	/^Value::operator <=( const Value &other ) const$/;"	f	class:Json::Value
+operator =	json/json_value.cpp	/^Value::CZString::operator =( const CZString &other )$/;"	f	class:Json::Value::CZString
+operator =	json/json_value.cpp	/^Value::operator=( const Value &other )$/;"	f	class:Json::Value
+operator ==	WebPage.cc	/^bool operator==(const WebPage & lhs,const WebPage & rhs)$/;"	f	namespace:mm
+operator ==	json/json_value.cpp	/^Value::CZString::operator==( const CZString &other ) const $/;"	f	class:Json::Value::CZString
+operator ==	json/json_value.cpp	/^Value::operator ==( const Value &other ) const$/;"	f	class:Json::Value
+operator >	json/json_value.cpp	/^Value::operator >( const Value &other ) const$/;"	f	class:Json::Value
+operator >=	json/json_value.cpp	/^Value::operator >=( const Value &other ) const$/;"	f	class:Json::Value
+operator >>	json/json_reader.cpp	/^std::istream& operator>>( std::istream &sin, Value &root )$/;"	f	namespace:Json
+operator []	json/json_value.cpp	/^Value::operator[]( UInt index ) const$/;"	f	class:Json::Value
+operator []	json/json_value.cpp	/^Value::operator[]( UInt index )$/;"	f	class:Json::Value
+operator []	json/json_value.cpp	/^Value::operator[]( const CppTL::ConstString &key ) const$/;"	f	class:Json::Value
+operator []	json/json_value.cpp	/^Value::operator[]( const CppTL::ConstString &key )$/;"	f	class:Json::Value
+operator []	json/json_value.cpp	/^Value::operator[]( const StaticString &key )$/;"	f	class:Json::Value
+operator []	json/json_value.cpp	/^Value::operator[]( const char *key ) const$/;"	f	class:Json::Value
+operator []	json/json_value.cpp	/^Value::operator[]( const char *key )$/;"	f	class:Json::Value
+operator []	json/json_value.cpp	/^Value::operator[]( const std::string &key ) const$/;"	f	class:Json::Value
+operator []	json/json_value.cpp	/^Value::operator[]( const std::string &key )$/;"	f	class:Json::Value
+pCacheManger_	CacheManger.cc	/^CacheManger * CacheManger::pCacheManger_=nullptr;\/\/饿汉模式$/;"	m	class:mm::CacheManger	file:
+pWordQuery_	WordQuery.cc	/^WordQuery * WordQuery::pWordQuery_=createWordQuery();\/\/饱汉模式$/;"	m	class:mm::WordQuery	file:
+parse	json/json_reader.cpp	/^Reader::parse( const char *beginDoc, const char *endDoc, $/;"	f	class:Json::Reader
+parse	json/json_reader.cpp	/^Reader::parse( const std::string &document, $/;"	f	class:Json::Reader
+parse	json/json_reader.cpp	/^Reader::parse( std::istream& sin,$/;"	f	class:Json::Reader
+parseMsg	MyTask.cc	/^int MyTask::parseMsg()$/;"	f	class:mm::MyTask
+periodicUpdate	CacheManger.cc	/^void CacheManger::periodicUpdate()$/;"	f	class:mm::CacheManger
+pop	TaskQueue.cc	/^ElemType TaskQueue::pop()$/;"	f	class:mm::TaskQueue
+port	InetAddress.cc	/^unsigned short InetAddress::port() const$/;"	f	class:mm::InetAddress
+process	MyTask.cc	/^void MyTask::process()$/;"	f	class:mm::MyTask
+ptimer_	Timer.cc	/^Timer * Timer::ptimer_=createTimer();\/\/饱汉模式$/;"	m	class:mm::Timer	file:
+push	TaskQueue.cc	/^void TaskQueue::push(ElemType elem)$/;"	f	class:mm::TaskQueue
+pushValue	json/json_writer.cpp	/^StyledStreamWriter::pushValue( const std::string &value )$/;"	f	class:Json::StyledStreamWriter
+pushValue	json/json_writer.cpp	/^StyledWriter::pushValue( const std::string &value )$/;"	f	class:Json::StyledWriter
+readArray	json/json_reader.cpp	/^Reader::readArray( Token &tokenStart )$/;"	f	class:Json::Reader
+readCStyleComment	json/json_reader.cpp	/^Reader::readCStyleComment()$/;"	f	class:Json::Reader
+readComment	json/json_reader.cpp	/^Reader::readComment()$/;"	f	class:Json::Reader
+readCppStyleComment	json/json_reader.cpp	/^Reader::readCppStyleComment()$/;"	f	class:Json::Reader
+readFromFile	CacheManger.cc	/^void CacheManger::readFromFile()$/;"	f	class:mm::CacheManger
+readNumber	json/json_reader.cpp	/^Reader::readNumber()$/;"	f	class:Json::Reader
+readObject	json/json_reader.cpp	/^Reader::readObject( Token &tokenStart )$/;"	f	class:Json::Reader
+readString	json/json_reader.cpp	/^Reader::readString()$/;"	f	class:Json::Reader
+readToken	json/json_reader.cpp	/^Reader::readToken( Token &token )$/;"	f	class:Json::Reader
+readTrain	SocketIO.cc	/^int SocketIO::readTrain(char * buff)$/;"	f	class:mm::SocketIO
+readValue	json/json_reader.cpp	/^Reader::readValue()$/;"	f	class:Json::Reader
+readline	SocketIO.cc	/^int SocketIO::readline(char * buff, int maxlen)$/;"	f	class:mm::SocketIO
+readn	SocketIO.cc	/^int SocketIO::readn(char * buff, int len)$/;"	f	class:mm::SocketIO
+ready	Acceptor.cc	/^void Acceptor::ready()$/;"	f	class:mm::Acceptor
+receive	TcpConnection.cc	/^string TcpConnection::receive()$/;"	f	class:mm::TcpConnection
+recoverFromError	json/json_reader.cpp	/^Reader::recoverFromError( TokenType skipUntilToken )$/;"	f	class:Json::Reader
+recvCycle	SocketIO.cc	/^int SocketIO::recvCycle(void *p,int len)$/;"	f	class:mm::SocketIO
+recvPeek	SocketIO.cc	/^int SocketIO::recvPeek(char * buff, int len)$/;"	f	class:mm::SocketIO
+release	json/json_batchallocator.h	/^   void release( AllocatedType *object )$/;"	f	class:Json::BatchAllocator
+releaseMemberName	json/json_value.cpp	/^   virtual void releaseMemberName( char *memberName )$/;"	f	class:Json::DefaultValueAllocator
+releaseStringValue	json/json_value.cpp	/^   virtual void releaseStringValue( char *value )$/;"	f	class:Json::DefaultValueAllocator
+removeMember	json/json_value.cpp	/^Value::removeMember( const char* key )$/;"	f	class:Json::Value
+removeMember	json/json_value.cpp	/^Value::removeMember( const std::string &key )$/;"	f	class:Json::Value
+resize	json/json_value.cpp	/^Value::resize( UInt newSize )$/;"	f	class:Json::Value
+resolve	json/json_value.cpp	/^Path::resolve( const Value &root ) const$/;"	f	class:Json::Path
+resolve	json/json_value.cpp	/^Path::resolve( const Value &root, $/;"	f	class:Json::Path
+resolveReference	json/json_value.cpp	/^Value::resolveReference( const char *key, $/;"	f	class:Json::Value
+runInLoop	EventLoop.cc	/^void EventLoop::runInLoop(Functor && cb)$/;"	f	class:mm::EventLoop
+runInThread	Thread.cc	/^    void runInThread()$/;"	f	struct:mm::ThreadData
+searchElement	Cache.cc	/^string Cache::searchElement(string word)$/;"	f	class:mm::Cache
+searchWord	WebPage.cc	/^int WebPage::searchWord(string word)$/;"	f	class:mm::WebPage
+send	TcpConnection.cc	/^void TcpConnection::send(const string & msg)$/;"	f	class:mm::TcpConnection
+sendInLoop	TcpConnection.cc	/^void TcpConnection::sendInLoop(const string & msg)$/;"	f	class:mm::TcpConnection
+setCloseCallback	TcpConnection.cc	/^void TcpConnection::setCloseCallback(const TcpConnectionCallback & cb)$/;"	f	class:mm::TcpConnection
+setCloseCallback	TcpServer.cc	/^void TcpServer::setCloseCallback(TcpConnectionCallback && cb)$/;"	f	class:mm::TcpServer
+setComment	json/json_value.cpp	/^Value::CommentInfo::setComment( const char *text )$/;"	f	class:Json::Value::CommentInfo
+setComment	json/json_value.cpp	/^Value::setComment( const char *comment,$/;"	f	class:Json::Value
+setComment	json/json_value.cpp	/^Value::setComment( const std::string &comment,$/;"	f	class:Json::Value
+setConnectionCallback	TcpConnection.cc	/^void TcpConnection::setConnectionCallback(const TcpConnectionCallback & cb)$/;"	f	class:mm::TcpConnection
+setConnectionCallback	TcpServer.cc	/^void TcpServer::setConnectionCallback(TcpConnectionCallback && cb)$/;"	f	class:mm::TcpServer
+setMessageCallback	TcpConnection.cc	/^void TcpConnection::setMessageCallback(const TcpConnectionCallback & cb)$/;"	f	class:mm::TcpConnection
+setMessageCallback	TcpServer.cc	/^void TcpServer::setMessageCallback(TcpConnectionCallback && cb)$/;"	f	class:mm::TcpServer
+setReuseAddr	Acceptor.cc	/^void Acceptor::setReuseAddr(bool on)$/;"	f	class:mm::Acceptor
+setReusePort	Acceptor.cc	/^void Acceptor::setReusePort(bool on)$/;"	f	class:mm::Acceptor
+setTimer	Timer.cc	/^void Timer::setTimer(int initTime,int intervalTime)$/;"	f	class:mm::Timer
+setWordWigh	WebPage.cc	/^void WebPage::setWordWigh(string word,double wight)$/;"	f	class:mm::WebPage
+shutdown	TcpConnection.cc	/^void TcpConnection::shutdown()$/;"	f	class:mm::TcpConnection
+shutdownWrite	Socket.cc	/^void Socket::shutdownWrite()$/;"	f	class:mm::Socket
+size	json/json_value.cpp	/^Value::size() const$/;"	f	class:Json::Value
+skipCommentTokens	json/json_reader.cpp	/^Reader::skipCommentTokens( Token &token )$/;"	f	class:Json::Reader
+skipSpaces	json/json_reader.cpp	/^Reader::skipSpaces()$/;"	f	class:Json::Reader
+start	TcpServer.cc	/^void TcpServer::start()$/;"	f	class:mm::TcpServer
+start	Thread.cc	/^void Thread::start()$/;"	f	class:mm::Thread
+start	Threadpool.cc	/^void Threadpool::start()$/;"	f	class:mm::Threadpool
+start	Timer.cc	/^void Timer::start()$/;"	f	class:mm::Timer
+start	WordQueryServer.cc	/^void SpellcorrectServer::start()$/;"	f	class:mm::SpellcorrectServer
+stop	Threadpool.cc	/^void Threadpool::stop()$/;"	f	class:mm::Threadpool
+stop	Timer.cc	/^void Timer::stop()$/;"	f	class:mm::Timer
+strictMode	json/json_reader.cpp	/^Features::strictMode()$/;"	f	class:Json::Features
+swap	json/json_value.cpp	/^Value::CZString::swap( CZString &other )$/;"	f	class:Json::Value::CZString
+swap	json/json_value.cpp	/^Value::swap( Value &other )$/;"	f	class:Json::Value
+threadFunc	Thread.cc	/^void * Thread::threadFunc(void * arg)$/;"	f	class:mm::Thread
+threadFunc	Threadpool.cc	/^void Threadpool::threadFunc()$/;"	f	class:mm::Threadpool
+threadNum	Thread.cc	/^__thread int threadNum=0;$/;"	m	namespace:mm	file:
+toString	TcpConnection.cc	/^string TcpConnection::toString() const$/;"	f	class:mm::TcpConnection
+toStyledString	json/json_value.cpp	/^Value::toStyledString() const$/;"	f	class:Json::Value
+type	json/json_value.cpp	/^Value::type() const$/;"	f	class:Json::Value
+uintToString	json/json_writer.cpp	/^static void uintToString( unsigned int value, $/;"	f	namespace:Json
+unindent	json/json_writer.cpp	/^StyledStreamWriter::unindent()$/;"	f	class:Json::StyledStreamWriter
+unindent	json/json_writer.cpp	/^StyledWriter::unindent()$/;"	f	class:Json::StyledWriter
+unlock	MutexLock.cc	/^void MutexLock::unlock()$/;"	f	class:mm::MutexLock
+unloop	EventLoop.cc	/^void EventLoop::unloop()$/;"	f	class:mm::EventLoop
+used_	json/json_batchallocator.h	/^      AllocatedType *used_;$/;"	m	struct:Json::BatchAllocator::BatchInfo
+valueAllocator	json/json_value.cpp	/^static ValueAllocator *&valueAllocator()$/;"	f	namespace:Json
+valueToQuotedString	json/json_writer.cpp	/^std::string valueToQuotedString( const char *value )$/;"	f	namespace:Json
+valueToString	json/json_writer.cpp	/^std::string valueToString( Int value )$/;"	f	namespace:Json
+valueToString	json/json_writer.cpp	/^std::string valueToString( UInt value )$/;"	f	namespace:Json
+valueToString	json/json_writer.cpp	/^std::string valueToString( bool value )$/;"	f	namespace:Json
+valueToString	json/json_writer.cpp	/^std::string valueToString( double value )$/;"	f	namespace:Json
+wait	Condition.cc	/^void Condition::wait()$/;"	f	class:mm::Condition
+waitEpollFd	EventLoop.cc	/^void EventLoop::waitEpollFd()$/;"	f	class:mm::EventLoop
+wakeup	EventLoop.cc	/^void EventLoop::wakeup()$/;"	f	class:mm::EventLoop
+wakeup	TaskQueue.cc	/^void TaskQueue::wakeup()$/;"	f	class:mm::TaskQueue
+write	json/json_writer.cpp	/^FastWriter::write( const Value &root )$/;"	f	class:Json::FastWriter
+write	json/json_writer.cpp	/^StyledStreamWriter::write( std::ostream &out, const Value &root )$/;"	f	class:Json::StyledStreamWriter
+write	json/json_writer.cpp	/^StyledWriter::write( const Value &root )$/;"	f	class:Json::StyledWriter
+writeArrayValue	json/json_writer.cpp	/^StyledStreamWriter::writeArrayValue( const Value &value )$/;"	f	class:Json::StyledStreamWriter
+writeArrayValue	json/json_writer.cpp	/^StyledWriter::writeArrayValue( const Value &value )$/;"	f	class:Json::StyledWriter
+writeCommentAfterValueOnSameLine	json/json_writer.cpp	/^StyledStreamWriter::writeCommentAfterValueOnSameLine( const Value &root )$/;"	f	class:Json::StyledStreamWriter
+writeCommentAfterValueOnSameLine	json/json_writer.cpp	/^StyledWriter::writeCommentAfterValueOnSameLine( const Value &root )$/;"	f	class:Json::StyledWriter
+writeCommentBeforeValue	json/json_writer.cpp	/^StyledStreamWriter::writeCommentBeforeValue( const Value &root )$/;"	f	class:Json::StyledStreamWriter
+writeCommentBeforeValue	json/json_writer.cpp	/^StyledWriter::writeCommentBeforeValue( const Value &root )$/;"	f	class:Json::StyledWriter
+writeIndent	json/json_writer.cpp	/^StyledStreamWriter::writeIndent()$/;"	f	class:Json::StyledStreamWriter
+writeIndent	json/json_writer.cpp	/^StyledWriter::writeIndent()$/;"	f	class:Json::StyledWriter
+writeToFile	CacheManger.cc	/^void CacheManger::writeToFile()$/;"	f	class:mm::CacheManger
+writeTrain	SocketIO.cc	/^int SocketIO::writeTrain(const char * buff)$/;"	f	class:mm::SocketIO
+writeValue	json/json_writer.cpp	/^FastWriter::writeValue( const Value &value )$/;"	f	class:Json::FastWriter
+writeValue	json/json_writer.cpp	/^StyledStreamWriter::writeValue( const Value &value )$/;"	f	class:Json::StyledStreamWriter
+writeValue	json/json_writer.cpp	/^StyledWriter::writeValue( const Value &value )$/;"	f	class:Json::StyledWriter
+writeWithIndent	json/json_writer.cpp	/^StyledStreamWriter::writeWithIndent( const std::string &value )$/;"	f	class:Json::StyledStreamWriter
+writeWithIndent	json/json_writer.cpp	/^StyledWriter::writeWithIndent( const std::string &value )$/;"	f	class:Json::StyledWriter
+writen	SocketIO.cc	/^int SocketIO::writen(const char * buff, int len)$/;"	f	class:mm::SocketIO
+~BatchAllocator	json/json_batchallocator.h	/^   ~BatchAllocator()$/;"	f	class:Json::BatchAllocator
+~CZString	json/json_value.cpp	/^Value::CZString::~CZString()$/;"	f	class:Json::Value::CZString
+~CommentInfo	json/json_value.cpp	/^Value::CommentInfo::~CommentInfo()$/;"	f	class:Json::Value::CommentInfo
+~Condition	Condition.cc	/^Condition::~Condition()$/;"	f	class:mm::Condition
+~DefaultValueAllocator	json/json_value.cpp	/^   virtual ~DefaultValueAllocator()$/;"	f	class:Json::DefaultValueAllocator
+~MutexLock	MutexLock.cc	/^MutexLock::~MutexLock()$/;"	f	class:mm::MutexLock
+~Socket	Socket.cc	/^Socket::~Socket()$/;"	f	class:mm::Socket
+~TcpConnection	TcpConnection.cc	/^TcpConnection::~TcpConnection()$/;"	f	class:mm::TcpConnection
+~Thread	Thread.cc	/^Thread::~Thread()$/;"	f	class:mm::Thread
+~Value	json/json_value.cpp	/^Value::~Value()$/;"	f	class:Json::Value
+~ValueAllocator	json/json_value.cpp	/^ValueAllocator::~ValueAllocator()$/;"	f	class:Json::ValueAllocator
+~Writer	json/json_writer.cpp	/^Writer::~Writer()$/;"	f	class:Json::Writer

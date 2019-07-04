@@ -2,10 +2,12 @@ ip 192.168.80.128
 port 2000
 queSize 10
 threadNum 4
+cacheCap 100
 rss /home/chengang/c++/miniSearchEngine/rss
 stopword /home/chengang/c++/miniSearchEngine/include/cppjieba/dict/stop_words.utf8
 offset /home/chengang/c++/miniSearchEngine/libs/offset.lib
 ripepage /home/chengang/c++/miniSearchEngine/libs/ripepage.lib
+cache /home/chengang/c++/miniSearchEngine/data/cacheData.lib
 newoffset /home/chengang/c++/miniSearchEngine/data/newoffset.lib
 newripepage /home/chengang/c++/miniSearchEngine/data/newripepage.lib
 invertIndex /home/chengang/c++/miniSearchEngine/data/invertIndex.lib

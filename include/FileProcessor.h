@@ -29,6 +29,7 @@ private:
     vector<WebPage> _vecWebpage;//存储每一篇文章
     vector<WebPage> _newvecWebpage;//去重后每一篇文章
     unordered_map<string,unordered_map<int,double>> _InvertIndexTable;//倒排索引表:单词，ID，权重
+    unordered_set<string> _stopWord;//停用词
     Configuration * _pconf;
 };
 

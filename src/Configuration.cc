@@ -27,11 +27,10 @@ Configuration * Configuration::init(const string & filepath)
     while(ifs>>s1>>s2)
     {
         _configMap.insert(make_pair(s1,s2));
-        cout<<s1<<" "<<s2<<endl;
+        //cout<<s1<<" "<<s2<<endl;
     }
     ifs.close();
     string word;
-    //int cnt=20;
     ifs.open(_configMap["stopword"]);
     while(ifs>>word)
     {

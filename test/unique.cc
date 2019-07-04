@@ -9,6 +9,7 @@ int main()
 {
     array<int,5> a{1,1,1,2,2};
     auto it=unique(a.begin(),a.end());
+    cout<<*it<<endl;//指向去重后元素的下一个
     for(auto iter=a.begin();iter!=it;++iter)
     {
         cout<<*iter<<endl;
