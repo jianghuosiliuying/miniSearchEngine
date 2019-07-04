@@ -41,6 +41,7 @@ string WebPage::getSummary(vector<string> & word)
 }
 void WebPage::createSummary(vector<string> & word)
 {//截取单词所在的一行
+    int cnt=0;
     string content=_docDescription+"\n"+_docContent;
     string line;
     stringstream ss(content);
@@ -67,6 +68,10 @@ void WebPage::createSummary(vector<string> & word)
                     _docSummary.append(w).append("...<br/>");
                 }
                 //cout<<_docSummary<<endl;
+                ++cnt;
+            }
+            if(cnt>=5){
+                return;
             }
         }
     }

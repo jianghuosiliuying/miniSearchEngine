@@ -97,7 +97,7 @@ void MyTask::createJson(string & response)//建立json
     Json::Value arr;
     Json::Value elem;
     string title,url,summary;
-    for(int i=0;!_resultQue.empty() && i<5;++i)
+    for(int i=0;!_resultQue.empty() && i<10;++i)
     {//建立json数组
         title=page[_resultQue.top()._iDocid-1].getTitle();
         url=page[_resultQue.top()._iDocid-1].getUrl();
