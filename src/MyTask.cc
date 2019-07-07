@@ -5,7 +5,7 @@
 #include "../include/WordQuery.h"
 #include "../include/Configuration.h"
 #include "../include/Thread.h"
-#include "../include/CacheManger.h"
+#include "../include/Redis.h"
 #include <iostream>
 #include <map>
 #include <vector>
@@ -17,8 +17,7 @@ namespace mm
 MyTask::MyTask(const string & msg,const mm::TcpConnectionPtr & conn)
 : _msg(msg)//待查询单词
 , _conn(conn)
-,pcacheM_(CacheManger::createCacheManger())//拿到cacheManger对象指针
-,_pwordquery(WordQuery::createWordQuery())
+,_pwordquery(WordQuery::createWordQuery())//网页库
 ,_pconf(Configuration::createConfig())
 {}
 
@@ -28,58 +27,54 @@ void MyTask::process()
 	string response;
     cout<<"i am "<<threadNum<<" thread, id="<<pthread_self()<<endl;
 	//decode
-#if 0
-    Cache & hotcache=pcacheM_->getCache(threadNum);
-    string  hotdataJson=hotcache.searchElement(_msg);//在子线程热数据cache中查找
-    if(!hotdataJson.empty())
-    {//热数据命中
-        cout<<threadNum<<" thread hotdata is hit."<<endl;
-        response=hotdataJson;
-    }else{//热数据未命中
-        string retjson=pcacheM_->getCache(0).searchElement(_msg);
-        if(!retjson.empty()){//主缓存命中
-            cout<<threadNum<<" thread hotdata is not hit. main cache is hit."<<endl;
-            response=retjson;
-            //cout<<response<<endl;
-        }else{//缓存未命中
+#if 1
+    Redis * r=new Redis();
+    if(!r->connect("192.168.80.128",6379)){
+        cout<<"connect error."<<endl;
+    }
+    string retjson=r->get(_msg);
+    if(!retjson.empty()){//主缓存命中
+        cout<<threadNum<<" main cache is hit."<<endl;
+        response=retjson;
+        //cout<<response<<endl;
+    }else{//缓存未命中
 #endif
-            cout<<threadNum<<" thread hotdata is not hit. main cache is not hit, will compute."<<endl;
-            int ret=parseMsg();//查找索引找到每个单词所在文章号，存到_docSet
-            if(ret){
-                findResultset();//求取单词结果集的交集
-                if(!_docResultSet.empty()){
-	            //compute
-                    MyResult result;
-                    int i=0;
-                    for(auto & vecW:_docWight)//遍历vector并计算编辑距离，存到优先级队列里
-                    {
-                        int id=_docResultSet[i];
-                        double w=computeCOSdistance(vecW);
-                        ++i;
-                        result._iDocid=id;
-                        result._iCos=w;
-                        _resultQue.push(result);
-                        //cout<<"id="<<id<<" w="<<w<<endl;
-                    }
-                    createJson(response);//要返回给客户端的消息
-                }else{
-                    cout<<"don't find the page 1."<<endl;
-                    //未查找到该网页
-                    createNoJson(response);//要返回给客户端的消息
+	    //compute
+        cout<<threadNum<<" main cache is not hit, will compute."<<endl;
+        int ret=parseMsg();//查找索引找到每个单词所在文章号，存到_docSet
+        if(ret){
+            findResultset();//求取单词结果集的交集
+            if(!_docResultSet.empty()){
+                MyResult result;
+                int i=0;
+                for(auto & vecW:_docWight)//遍历vector并计算编辑距离，存到优先级队列里
+                {
+                    int id=_docResultSet[i];
+                    double w=computeCOSdistance(vecW);
+                    ++i;
+                    result._iDocid=id;
+                    result._iCos=w;
+                    _resultQue.push(result);
+                    //cout<<"id="<<id<<" w="<<w<<endl;
                 }
+                createJson(response);//要返回给客户端的消息
+                r->set(_msg,response);//添加热数据
+                delete r;
             }else{
-                cout<<"don't find the page 2."<<endl;
+                cout<<"don't find the page 1."<<endl;
                 //未查找到该网页
                 createNoJson(response);//要返回给客户端的消息
             }
-	        //encode
-            //hotcache.addElement(_msg,response);//添加热数据
-      //  }
-    //}
-	//string response = _msg;//要返回给客户端的消息
+        }else{
+            cout<<"don't find the page 2."<<endl;
+            //未查找到该网页
+            createNoJson(response);//要返回给客户端的消息
+        }
+    }
+	//encode
 	//_conn->send(response);//由线程池的线程(计算线程)完成数据的发送,在设计上来说，是不合理的
-						  //数据发送的工作要交还给IO线程(Reactor所在的线程)完成
-						  //将send的函数的执行延迟到IO线程取操作
+	  				  //数据发送的工作要交还给IO线程(Reactor所在的线程)完成
+	  				  //将send的函数的执行延迟到IO线程取操作
     //cout<<response<<endl;
     //以下4句是为php服务
     int sz=response.size();
@@ -242,6 +237,5 @@ double MyTask::computeCOSdistance(vector<double> & wight2)
     double cosW=inner/(_baseMod*mod2);
     return cosW;
 }
-
 
 }//end of namespace mm

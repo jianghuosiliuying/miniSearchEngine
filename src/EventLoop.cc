@@ -1,6 +1,5 @@
 #include "../include/EventLoop.h" 
 #include "../include/Acceptor.h"
-#include "../include/Timer.h"
 #include "../include/TcpConnection.h"
 
 #include <unistd.h>
@@ -16,15 +15,12 @@ namespace mm
 EventLoop::EventLoop(Acceptor & acceptor)
 : _efd(createEpollFd())
 , _eventfd(createEventFd())
-,pTimer_(Timer::createTimer())
-,timerfd_(pTimer_->getFd())
 , _acceptor(acceptor)
 , _eventList(1024)
 , _isLooping(false)
 {
 	addEpollFdRead(_acceptor.fd());
 	addEpollFdRead(_eventfd);
-	addEpollFdRead(timerfd_);
 }
 
 void EventLoop::loop()
@@ -82,11 +78,6 @@ void EventLoop::waitEpollFd()
 					doPendingFunctors();//在这里发送数据
 					//cout << ">>after doPendingFunctors()" << endl;
 				}
-            }else if(fd==timerfd_){//处理时间超时回写事件
-                if(_eventList[idx].events & EPOLLIN){
-                    cout<<"i will handle update cache."<<endl;
-                    pTimer_->Timer::handleRead();//包含读取描述符和执行回写事件
-                }
             } else {
 				//处理消息,接收客户端数据
 				if(_eventList[idx].events & EPOLLIN) {
