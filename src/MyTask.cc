@@ -59,7 +59,6 @@ void MyTask::process()
                 }
                 createJson(response);//要返回给客户端的消息
                 r->set(_msg,response);//添加热数据
-                delete r;
             }else{
                 cout<<"don't find the page 1."<<endl;
                 //未查找到该网页
@@ -75,6 +74,7 @@ void MyTask::process()
 	//_conn->send(response);//由线程池的线程(计算线程)完成数据的发送,在设计上来说，是不合理的
 	  				  //数据发送的工作要交还给IO线程(Reactor所在的线程)完成
 	  				  //将send的函数的执行延迟到IO线程取操作
+    delete r;
     //cout<<response<<endl;
     //以下4句是为php服务
     int sz=response.size();
