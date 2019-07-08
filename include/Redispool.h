@@ -9,19 +9,21 @@ using namespace std;
 namespace mm
 {
 
-using connect = Redis *;
-using ElemType = connect ;
 
 class Redispool
 {
 public:
-	Redispool(size_t connectNum);
-	~Redispool();
-    connect getConnect();
-    void backConnect(connect connect);
+    static Redispool * createRedispool();
+    static void destroy();
+    Redis * getConnect();
+    void backConnect(Redis * connect);
 private:
+	Redispool();
+	~Redispool();
+private:
+    static Redispool * _predispool;
 	size_t _connectNum;
-	queue<ElemType> _que;
+	queue<Redis*> _que;
 	MutexLock _mutex;
 };
 

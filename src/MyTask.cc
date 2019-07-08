@@ -27,21 +27,14 @@ void MyTask::process()
 	string response;
     cout<<"i am "<<threadNum<<" thread, id="<<pthread_self()<<endl;
 	//decode
-#if 1
-    //Redis * r=new Redis();
-    //if(!r->connect("192.168.80.128",6379)){
-    //    cout<<"connect error."<<endl;
-    //}
-    int connectNum=stoi(_pconf->getConfigMap()["redisconnectNum"]);
-    Redispool redispool(connectNum);//创建redis连接池
-    Redis * r=redispool.getConnect();//获取一个redis连接
+    Redispool * redispool=Redispool::createRedispool();//创建redis连接池
+    Redis * r=redispool->getConnect();//获取一个redis连接
     string retjson=r->get(_msg);
     if(!retjson.empty()){//主缓存命中
         cout<<threadNum<<" main cache is hit."<<endl;
         response=retjson;
         //cout<<response<<endl;
     }else{//缓存未命中
-#endif
 	    //compute
         cout<<threadNum<<" main cache is not hit, will compute."<<endl;
         int ret=parseMsg();//查找索引找到每个单词所在文章号，存到_docSet
@@ -61,7 +54,6 @@ void MyTask::process()
                     //cout<<"id="<<id<<" w="<<w<<endl;
                 }
                 createJson(response);//要返回给客户端的消息
-                r->set(_msg,response);//添加热数据
             }else{
                 cout<<"don't find the page 1."<<endl;
                 //未查找到该网页
@@ -72,12 +64,13 @@ void MyTask::process()
             //未查找到该网页
             createNoJson(response);//要返回给客户端的消息
         }
+        r->set(_msg,response);//添加热数据
     }
 	//encode
 	//_conn->send(response);//由线程池的线程(计算线程)完成数据的发送,在设计上来说，是不合理的
 	  				  //数据发送的工作要交还给IO线程(Reactor所在的线程)完成
 	  				  //将send的函数的执行延迟到IO线程取操作
-    redispool.backConnect(r);//将连接归还给连接池
+    redispool->backConnect(r);//将连接归还给连接池
     //cout<<response<<endl;
     //以下4句是为php服务
     int sz=response.size();

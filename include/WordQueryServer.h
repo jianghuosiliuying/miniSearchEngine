@@ -2,14 +2,12 @@
 
 #include "Threadpool.h"
 #include "TcpServer.h"
-//#include "../include/Timer.h"
 
 namespace mm
 {
-class Timer;
 class Configuration;
-class CacheManger;
 class Threadpool;
+class Redispool;
 class SpellcorrectServer//文本纠错类
 {
 public:
@@ -22,8 +20,7 @@ public:
 
 private:
     Configuration * conf_;//更改为单例模式
-    CacheManger * cacheM_;
-    Timer * timer_;
+    Redispool * _predispool;//redis连接池
 	Threadpool threadpool_;
 	TcpServer server_;
 };

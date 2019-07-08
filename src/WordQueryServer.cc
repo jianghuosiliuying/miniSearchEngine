@@ -2,6 +2,7 @@
 #include "../include/MyTask.h"
 #include "../include/WordQuery.h"
 #include "../include/Configuration.h"
+#include "../include/Redispool.h"
 #include <iostream>
 
 using namespace std;
@@ -10,6 +11,7 @@ namespace mm
 {
 SpellcorrectServer::SpellcorrectServer(const string & conffileName)
 :conf_(Configuration::createConfig()->init(conffileName))//初始化配置信息
+,_predispool(Redispool::createRedispool())
 ,threadpool_(stoi(conf_->getConfigMap().find("threadNum")->second),
              stoi(conf_->getConfigMap().find("queSize")->second))
 //,threadpool_(4,10)
