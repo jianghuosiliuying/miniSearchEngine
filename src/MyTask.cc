@@ -5,7 +5,7 @@
 #include "../include/WordQuery.h"
 #include "../include/Configuration.h"
 #include "../include/Thread.h"
-#include "../include/Redis.h"
+#include "../include/Redispool.h"
 #include <iostream>
 #include <map>
 #include <vector>
@@ -28,10 +28,13 @@ void MyTask::process()
     cout<<"i am "<<threadNum<<" thread, id="<<pthread_self()<<endl;
 	//decode
 #if 1
-    Redis * r=new Redis();
-    if(!r->connect("192.168.80.128",6379)){
-        cout<<"connect error."<<endl;
-    }
+    //Redis * r=new Redis();
+    //if(!r->connect("192.168.80.128",6379)){
+    //    cout<<"connect error."<<endl;
+    //}
+    int connectNum=stoi(_pconf->getConfigMap()["redisconnectNum"]);
+    Redispool redispool(connectNum);//创建redis连接池
+    Redis * r=redispool.getConnect();//获取一个redis连接
     string retjson=r->get(_msg);
     if(!retjson.empty()){//主缓存命中
         cout<<threadNum<<" main cache is hit."<<endl;
@@ -74,7 +77,7 @@ void MyTask::process()
 	//_conn->send(response);//由线程池的线程(计算线程)完成数据的发送,在设计上来说，是不合理的
 	  				  //数据发送的工作要交还给IO线程(Reactor所在的线程)完成
 	  				  //将send的函数的执行延迟到IO线程取操作
-    delete r;
+    redispool.backConnect(r);//将连接归还给连接池
     //cout<<response<<endl;
     //以下4句是为php服务
     int sz=response.size();

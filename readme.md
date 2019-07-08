@@ -1,5 +1,5 @@
-# v3
-- 1.缓存cache和Timer文件已删除，改用redis缓存多次连接。尚未实现redis连接池。
+# v4
+- 1.缓存cache和Timer文件已删除，修用redis缓存多次连接。使用redis连接池进行连接。
 
 - 2.因和前端适应，去掉了服务器连接后主动发送welcome to server语句
 
