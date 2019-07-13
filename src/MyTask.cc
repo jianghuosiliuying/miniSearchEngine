@@ -43,7 +43,7 @@ void MyTask::process()
             if(!_docResultSet.empty()){
                 MyResult result;
                 int i=0;
-                for(auto & vecW:_docWight)//遍历vector并计算编辑距离，存到优先级队列里
+                for(auto & vecW:_docWight)//遍历vector并计算，存到优先级队列里
                 {
                     int id=_docResultSet[i];
                     double w=computeCOSdistance(vecW);
@@ -51,7 +51,7 @@ void MyTask::process()
                     result._iDocid=id;
                     result._iCos=w;
                     _resultQue.push(result);
-                    //cout<<"id="<<id<<" w="<<w<<endl;
+                    cout<<"id="<<id<<" cosW="<<w<<endl;
                 }
                 createJson(response);//要返回给客户端的消息
             }else{
@@ -132,13 +132,13 @@ int MyTask::parseMsg()
     WebPage msg(_msg);
     msg.computeFreQuency(jieba,stopword);//建立词频
     map<string,int> & tmp=msg.getWordMap();
-    int tf,N=_pwordquery->getpageLib().size()+1;
+    int tf,N=_pwordquery->getpageLib().size();
     double df,idf;
     for(auto & words:tmp)
     {//计算查询语句每个单词的权重
         string word=words.first;
         tf=words.second;
-        df=_pwordquery->getIndextable()[word].size()+1.0;
+        df=_pwordquery->getIndextable()[word].size();
         idf=log(static_cast<double>(N)/(df+1.0))/log(2);
         double wtmp=tf*idf;
         cout<<word<<" tf="<<tf<<" df="<<df<<" idf="<<idf<<" wtmp="<<wtmp<<endl;
@@ -193,7 +193,7 @@ void MyTask::findResultset()
     for(auto it=_docSet.begin()+1;it!=_docSet.end();++it)
     {
         vector<int> tmp;
-        set_intersection((*it).begin(),(*it).end(),_docResultSet.begin(),_docResultSet.end(),inserter(tmp,tmp.begin()));
+        set_intersection((*it).begin(),(*it).end(),_docResultSet.begin(),_docResultSet.end(),back_inserter(tmp));
         _docResultSet.swap(tmp);
     }
     cout<<"输出包含所有单词的文章集合："<<endl;
@@ -212,7 +212,7 @@ void MyTask::findResultset()
                 double w=indextable[word][id];
                 tmp.push_back(w);
             }
-            _docWight.push_back(tmp);
+            _docWight.push_back(tmp);//将每篇文章每个目标单词的权重存到二维数组里
         }
     }
 }
